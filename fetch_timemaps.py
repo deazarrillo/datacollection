@@ -23,7 +23,11 @@ memento_aggregator = 'http://localhost:1208'
 timemap_uri = f'{memento_aggregator}/timemap/cdxj/'
 url_field_location = 1  # 0-based, a better approach is needed for extraction
 
-data_files = ['src_data/howard.csv', 'src_data/famu.csv']
+import glob
+# Testing dynamic file reading as opposed to hard coded file names
+data_files = print(glob.glob("src_data/*.csv")
+                   
+#data_files = ['src_data/howard.csv', 'src_data/famu.csv']
 
 logging.basicConfig(format="%(asctime)s.%(msecs)03d %(levelname)s %(message)s", datefmt = "%Y-%m-%d %H:%M:%S", level = logging.INFO)
 
