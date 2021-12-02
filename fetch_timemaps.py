@@ -25,7 +25,7 @@ url_field_location = 1  # 0-based, a better approach is needed for extraction
 
 import glob
 # Testing dynamic file reading as opposed to hard coded file names
-data_files = print(glob.glob("src_data/*.csv")
+data_files = glob.glob("src_data/*.csv")
                    
 #data_files = ['src_data/howard.csv', 'src_data/famu.csv']
 
